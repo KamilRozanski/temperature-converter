@@ -17,6 +17,8 @@ if ('serviceWorker' in navigator) {
 // place your code below
 
 
-console.log(`Hello world!`);
+const CelsiusButton = document.querySelector('#button-c');
+const FahrenheitButton = document.querySelector('#button-f');
+console.log(CelsiusButton.innerHTML);
 
 
