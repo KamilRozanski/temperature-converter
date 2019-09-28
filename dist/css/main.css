@@ -332,7 +332,8 @@ body {
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  background-image: url("../assets/img/background.jpg"); }
 
 #button-c, #button-f {
   display: inline-block;
@@ -365,6 +366,7 @@ body {
 
 #container, #container-2 {
   text-align: center;
-  padding: 20px; }
+  padding: 20px;
+  color: #FFF; }
 
 /*# sourceMappingURL=main.css.map */

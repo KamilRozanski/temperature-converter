@@ -21,6 +21,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url("../assets/img/background.jpg")
+}
+.main {
   
 }
 
@@ -57,4 +60,5 @@ body {
 #container, #container-2 {
   text-align: center;
   padding: 20px;
+  color: #FFF;
 }
