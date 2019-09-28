@@ -311,32 +311,55 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit; }
 
 body {
-  padding: 10px;
   margin: 0;
   text-align: center;
   height: 100vh;
+  font-family: Arial, Helvetica, sans-serif; }
+
+.main {
+  background-image: url("../assets/img/background.jpg");
+  background-size: cover;
+  background-position: right;
+  max-width: 1920px;
+  height: 100vh;
+  padding: 8px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-image: url("../assets/img/background.jpg"); }
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  @media (max-width: 1024px) {
+    .main {
+      background-position: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; } }
 
-#button-c, #button-f {
+.wrapper {
+  margin-right: 200px; }
+  @media (max-width: 1024px) {
+    .wrapper {
+      margin-right: 0; } }
+
+#button-c,
+#button-f {
   display: inline-block;
+  min-width: 250px;
   padding: 11px 50px;
   max-width: 100%;
   font-size: 16px;
@@ -360,13 +383,26 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none; }
-  #button-c:hover, #button-c:active, #button-f:hover, #button-f:active {
+  #button-c:hover, #button-c:active,
+  #button-f:hover,
+  #button-f:active {
     color: #02ac46;
     background-color: #fff; }
+  @media (max-width: 320px) {
+    #button-c,
+    #button-f {
+      max-width: 100px; } }
 
-#container, #container-2 {
+#container,
+#container-2 {
   text-align: center;
   padding: 20px;
-  color: #FFF; }
+  color: #000;
+  min-height: 100px; }
+  @media (max-width: 320px) {
+    #container,
+    #container-2 {
+      min-width: 300px;
+      margin: 0 auto; } }
 
 /*# sourceMappingURL=main.css.map */
