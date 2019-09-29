@@ -31,23 +31,24 @@ celsiusButton.addEventListener('click', () => {
 
   let temp = window.prompt('Tell me your temperature is Celsius');
   const tempF = temp * 1.8 + 32;
-  if (isNaN(temp)) {
+  if (isNaN(temp)) { //  when in Not a number.
     outputCel.innerHTML = (`Hey ${temp} is not a number`);
-  } else if ((temp === null) || (temp === "")) {
-    outputCel.innerHTML = ('Hej you have to write something')
+  } else if ((temp === null) || (temp === "")) { // when is null or empty string.
+    outputCel.innerHTML = ('Hey, you have to write something ?!')
+  } else {
+    outputCel.innerHTML = temp * 1.8 + 32;
   }
 
   if (temp <= 0) {
-    outputCel.innerHTML = (`${temp} Celsius is ${Math.floor(tempF)}<br><br>
-    Fahrenheit and water freezes at this temperature`)
+    outputCel.innerHTML = (`${temp} Celsius degrees is ${Math.floor(tempF)} Fahrenheit. 
+    <br><br>  Water freezes at this temperature`)
   } else if ((temp < 0) || (temp <= 99)) {
-    outputCel.innerHTML = (`${temp} Celsius is ${Math.floor(tempF)}<br><br>
-    Fahrenheit and water in this temperature is a liquid. `)
+    outputCel.innerHTML = (`${temp} Celsius degrees is ${Math.floor(tempF)} Fahrenheit. 
+    <br><br> Water in this temperature is a liquid. `)
   } else {
-    outputCel.innerHTML = (`${temp} Celsius is ${Math.floor(tempF)}<br><br>
-    Fahrenheit and water in this temperature is boiling.`)
+    outputCel.innerHTML = (`${temp} Celsius degrees is ${Math.floor(tempF)} Fahrenheit. 
+    <br><br> Water in this temperature is boiling.`)
   }
-
 });
 
 fahrenheitButton.addEventListener('click', () => {
@@ -55,22 +56,20 @@ fahrenheitButton.addEventListener('click', () => {
   let temp = window.prompt('Tell me your temperature is Fahrenheit');
   const tempC = (5 / 9) * (temp - 32);
   if (isNaN(temp)) {
-    outputFah.innerHTML = (`Hey ${temp} is not a number`);
+    outputFah.innerHTML = (`Hey, ${temp} is not a number`);
   } else if ((temp === null) || (temp === "")) {
-    outputFah.innerHTML = ('Hej you have to write something')
-  // } else {
-  //   outputFah.innerHTML = (`${temp} Fahrenheits is ${Math.floor(tempC)} Celsius`);
-  // }
-  }
-  if (temp <= 32) {
-    outputFah.innerHTML = (`${temp} Celsius is ${Math.floor(tempC)}<br><br>
-    Fahrenheit and water freezes at this temperature`)
-  } else if ((temp < 32) || (temp <= 211)) {
-    outputFah.innerHTML = (`${temp} Celsius is ${Math.floor(tempC)}<br><br>
-    Fahrenheit and water in this temperature is a liquid. `)
-  } else {
-    outputFah.innerHTML = (`${temp} Celsius is ${Math.floor(tempC)}<br><br>
-    Fahrenheit and water in this temperature is boiling.`)
+    outputFah.innerHTML = ('Hey, you have to write something')
   }
 
-})
+  if (temp <= 32) {
+    outputFah.innerHTML = (`${temp} Celsius degrees is ${Math.floor(tempC)}
+    Fahrenheit.<br><br> Water freezes at this temperature`)
+  } else if ((temp < 32) || (temp <= 211)) {
+    outputFah.innerHTML = (`${temp} Celsius degrees is ${Math.floor(tempC)}<br><br>
+    Fahrenheit.<br><br> Water in this temperature is a liquid. `)
+  } else {
+    outputFah.innerHTML = (`${temp} Celsius degrees is ${Math.floor(tempC)}<br><br>
+    Fahrenheit.<br><br> Water in this temperature is boiling.`)
+  }
+
+});
