@@ -1,6 +1,6 @@
 {
-  "name": "Temperature converter",
-  "short_name": "Temperature converter",
+  "name": "temperature-converter",
+  "short_name": "temperature-converter",
   "theme_color": "#000000",
   "background_color": "#000000",
   "display": "standalone",
