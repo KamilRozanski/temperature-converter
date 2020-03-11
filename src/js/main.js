@@ -62,13 +62,13 @@ fahrenheitButton.addEventListener('click', () => {
     outputFah.innerHTML = ('Hey, you have to write something ?!')
   } else {
     if (temp <= 32) {
-      outputFah.innerHTML = (`${temp} Degrees fahrenheit is ${Math.floor(tempC)}
+      outputFah.innerHTML = (`${temp} Fahrenheit is ${Math.floor(tempC)}
       celsius.<br><br> Water freezes at this temperature`)
     } else if ((temp < 32) && (temp <= 211)) {
-      outputFah.innerHTML = (`${temp} Degrees fahrenheit is ${Math.floor(tempC)}<br><br>
+      outputFah.innerHTML = (`${temp} Fahrenheit is ${Math.floor(tempC)}<br><br>
       celsius.<br><br> Water in this temperature is a liquid. `)
     } else {
-      outputFah.innerHTML = (`${temp} Degrees fahrenheit is ${Math.floor(tempC)}<br><br>
+      outputFah.innerHTML = (`${temp} Fahrenheit is ${Math.floor(tempC)}<br><br>
       celsius.<br><br> Water in this temperature is boiling.`)
     }
 
