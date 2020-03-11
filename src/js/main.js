@@ -21,6 +21,7 @@ const celsiusButton = document.querySelector('#button-c');
 const fahrenheitButton = document.querySelector('#button-f');
 const outputCel = document.querySelector('#container');
 const outputFah = document.querySelector('#container-2');
+const btnClear = document.querySelector('.clear')
 
 
 outputCel.innerHTML = ('Tell me you temperature in Celsius:')
@@ -61,14 +62,14 @@ fahrenheitButton.addEventListener('click', () => {
     outputFah.innerHTML = ('Hey, you have to write something ?!')
   } else {
     if (temp <= 32) {
-      outputFah.innerHTML = (`${temp} Celsius degrees is ${Math.floor(tempC)}
-      Fahrenheit.<br><br> Water freezes at this temperature`)
+      outputFah.innerHTML = (`${temp} Fahrenheit degrees is ${Math.floor(tempC)}
+      celsius.<br><br> Water freezes at this temperature`)
     } else if ((temp < 32) && (temp <= 211)) {
-      outputFah.innerHTML = (`${temp} Celsius degrees is ${Math.floor(tempC)}<br><br>
-      Fahrenheit.<br><br> Water in this temperature is a liquid. `)
+      outputFah.innerHTML = (`${temp} Fahrenheit degrees is ${Math.floor(tempC)}<br><br>
+      celsius.<br><br> Water in this temperature is a liquid. `)
     } else {
-      outputFah.innerHTML = (`${temp} Celsius degrees is ${Math.floor(tempC)}<br><br>
-      Fahrenheit.<br><br> Water in this temperature is boiling.`)
+      outputFah.innerHTML = (`${temp} Fahrenheit degrees is ${Math.floor(tempC)}<br><br>
+      celsius.<br><br> Water in this temperature is boiling.`)
     }
 
   }
